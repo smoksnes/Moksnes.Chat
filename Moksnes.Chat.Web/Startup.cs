@@ -30,6 +30,8 @@ namespace Moksnes_Chat
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddSignalR(options => options.Hubs.EnableDetailedErrors = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +53,7 @@ namespace Moksnes_Chat
             }
 
             app.UseStaticFiles();
+            app.UseSignalR();
 
             app.UseMvc(routes =>
             {
