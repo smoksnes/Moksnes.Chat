@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
     selector: 'chat',
     templateUrl: './chat.component.html'
 })
-export class FetchDataComponent {
+export class ChatComponent {
     public forecasts: WeatherForecast[];
 
     constructor(http: Http, @Inject('ORIGIN_URL') originUrl: string) {
